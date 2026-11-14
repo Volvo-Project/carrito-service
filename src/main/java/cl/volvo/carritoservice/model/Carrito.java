@@ -2,9 +2,7 @@ package cl.volvo.carritoservice.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,4 +28,7 @@ public class Carrito {
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL,
             orphanRemoval = true)
     private List<ItemCarrito> items = new ArrayList<>();
+
+
+
 }
