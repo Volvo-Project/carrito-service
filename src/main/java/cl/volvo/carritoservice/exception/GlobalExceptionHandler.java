@@ -68,7 +68,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>>
     handleServicioNoDisponible(ServicioNoDisponibleException ex){
         log.error(ex.getMessage());
-        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body((Map.of("ERROR", ex.getMessage())));
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(Map.of("ERROR", ex.getMessage()));
     }
 
     @ExceptionHandler(Exception.class)
